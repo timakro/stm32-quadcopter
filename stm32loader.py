@@ -1,7 +1,6 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 # -*- coding: utf-8 -*-
-# vim: sw=4:ts=4:si:et:enc=utf-8
 
 # Author: Ivan A-R <ivan@tuxotronic.org>
 # Project page: http://tuxotronic.org/wiki/projects/stm32loader
@@ -100,6 +99,7 @@ class CommandInterface:
     def initChip(self):
         # Set boot
         self.sp.setRTS(0)
+        time.sleep(0.1)
         self.reset()
 
         self.sp.write("\x7F")       # Syncro
@@ -337,7 +337,7 @@ class CommandInterface:
 
 
 
-	def __init__(self) :
+    def __init__(self) :
         pass
 
 
