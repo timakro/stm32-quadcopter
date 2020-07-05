@@ -24,7 +24,7 @@ void main (void)
 
     // Configure pin 11 as push-pull output
     GPIOA->CRH &= ~(GPIO_CRH_MODE11 | GPIO_CRH_CNF11);
-    GPIOA->CRH |= GPIO_CRH_MODE11;
+    GPIOA->CRH |= GPIO_CRH_MODE11_1;
 
     while (1) {
         GPIOA->BSRR = (1<<11); // Set pin 11
